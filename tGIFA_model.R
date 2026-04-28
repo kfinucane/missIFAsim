@@ -1,6 +1,6 @@
 source("tGIFA_utils.R")
 
-tGIFA_model <- function(input_data, coding = NA, n.iters = 10000, k.star = 5,
+TGIFA_model <- function(input_data, coding = NA, n.iters = 10000, k.star = 5,
                         verbose = TRUE, burn = 5000, thin = 5,
                         kappa_1 = 3L, kappa_2 = 2L,
                         a_sigma = 1L, b_sigma = 0.25, a_1 = 2.1, a_2 = 3.1,
