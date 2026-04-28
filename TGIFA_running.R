@@ -53,11 +53,11 @@ if (length(which(prop_missing_by_var > 0.25)) > 0) {
 set.seed(generated_data$seeding + sim_num)
 
 # run TGIFA model
-TGIFA_res <- TGIFA_model(input_data = generated_data$use_data$data_w_missing, n.iters = 10, k.star = 5,
-                         burn = 0, thin = 5, return_chain = TRUE, prop_mult = chosen_prop_mult,
+TGIFA_res <- TGIFA_model(input_data = generated_data$use_data$data_w_missing, n.iters = 10000, k.star = 5,
+                         burn = 5000, thin = 5, return_chain = TRUE, prop_mult = chosen_prop_mult,
                          use_true_params = FALSE, generated_data = generated_data,
                          var_mult = 0.6,
-                         init_imp = "half_min")
+                         init_imp = "SVD")
 
 # file to save
 filename <- paste0(directory, "/TGIFA_MCMC_", sim_data_dist, "_p_", p, "_", sim_num, "_1_res.RData")
