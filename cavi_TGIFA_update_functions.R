@@ -1,4 +1,4 @@
-source("V-TGIFA_utils.R")
+source("VI-TGIFA_utils.R")
 
 update_eta <- function(Y, n, p, k_star, mean_sigma_inv,
                        mean_lambda, var_lambda, mean_mu) {
