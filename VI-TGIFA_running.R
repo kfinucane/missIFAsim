@@ -1,4 +1,4 @@
-source("V-TGIFA_model.R")
+source("VI-TGIFA_model.R")
 
 p <- 1391  # number of variables
 sim_data_dist <- "gaussian"  # distribution desired
@@ -39,7 +39,7 @@ for (sim_num in 1:10) {
   set.seed(generated_data$seeding + sim_num)
 
   # run method
-  cavi_res <- V_TGIFA_model(input_data = generated_data$use_data$data_w_missing, k.star = 5,
+  cavi_res <- VI_TGIFA_model(input_data = generated_data$use_data$data_w_missing, k.star = 5,
                           n.iters_min = 5, n.iters_max = 50, tolerance = 0.01,
                           imp.iters_min = 3, imp.iters_max = 10, n_imp = 100,
                           imp_pc_tol = 0.05,
