@@ -49,9 +49,6 @@ for (sim_num in 1:10) {
                           return_multiple = TRUE, return_params = TRUE,
                           use_true_params = FALSE, generated_data = generated_data)
 
-  # record end time
-  end_time <- Sys.time()
-
   # save results and timing
   save(cavi_res, file = paste0(directory, "/VI-TGIFA_res_", sim_data_dist, "_p_", p, "_", sim_num, "_1_res.RData"))
 
