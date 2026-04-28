@@ -1,3 +1,4 @@
+# source model script
 source("VI-TGIFA_model.R")
 
 p <- 1391  # number of variables
@@ -6,10 +7,11 @@ sim_data_dist <- "gaussian"  # distribution desired
 # directory for loading and saving
 directory <- paste0("results/p_", p, "_datasets")
 
+# run over all simulations (generally fast)
 for (sim_num in 1:10) {
 
   # load 18 x 1391 data
-  load(paste0(directory, "/../", sim_data_dist, "_dist_dataset_p_", p, "_", sim_num, ".RData"))
+  load(paste0(directory, "/", sim_data_dist, "_dist_dataset_p_", p, "_", sim_num, ".RData"))
 
   # remove variables that have > 25% missingness
   # missingness by variable
@@ -36,6 +38,7 @@ for (sim_num in 1:10) {
     generated_data$use_data$mu <- generated_data$data_gen$mu
   }
 
+  # seed
   set.seed(generated_data$seeding + sim_num)
 
   # run method
@@ -50,6 +53,6 @@ for (sim_num in 1:10) {
   end_time <- Sys.time()
 
   # save results and timing
-  save(cavi_res, file = paste0(directory, "/V-TGIFA_res_", sim_data_dist, "_p_", p, "_", sim_num, "_1_res.RData"))
+  save(cavi_res, file = paste0(directory, "/VI-TGIFA_res_", sim_data_dist, "_p_", p, "_", sim_num, "_1_res.RData"))
 
 }
