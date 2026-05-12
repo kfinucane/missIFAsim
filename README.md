@@ -34,8 +34,14 @@ while `IFA_model.R` contains the IFA model used.
 ### TGIFA simulation study
 
 The `TGIFA_running.R` script runs the TGIFA imputation, while
-`tGIFA_model.R` contains the tGIFA model, and `tGIFA_utils.R` contains
-utility functions.
+`tGIFA_model.R` contains the TGIFA model, and `tGIFA_utils.R` contains
+utility functions. Detail on TGIFA can be found in:
+
+Finucane, K., Brennan, L., De Vito, R., Russo, M., Gormley, I.C., 2025.
+Missing data imputation using a truncated Gaussian infinite factor model
+with application to metabolomics data.
+<a href="https://doi.org/10.48550/arXiv.2410.10633" > arXiv
+preprint</a>.
 
 ### VI-TGIFA simulation study
 
