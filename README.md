@@ -1,11 +1,12 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Simulation code for thesis: Apposite Bayesian latent factor models for imputation in metabolomics data.
+# Simulation code for missing data imputation using apposite Bayesian infinite factor analysis models.
 
-This repository contains the code used to create simulated datasets for
-rIFA, TGIFA, and VI-TGIFA simulation studies, and to run the simulation
-studies.
+This repository contains the code used to create simulated datasets and
+to run the simulation studies demonstrating the performance of robust
+infinite factor analysis (rIFA), truncated Gaussian infinite factor
+analysis (TGIFA), and variational inference for TGIFA (VI-TGIFA).
 
 ## Generating simulated data
 
