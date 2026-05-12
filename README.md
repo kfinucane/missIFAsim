@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Simulation code for missing data imputation using apposite Bayesian infinite factor analysis models.
+# Apposite Bayesian latent factor models for imputation in metabolomics data: simulation studies code.
 
 This repository contains the code used to create simulated datasets and
 to run the simulation studies demonstrating the performance of robust
